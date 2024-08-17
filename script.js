@@ -46,10 +46,10 @@ function draw(box){
 }
 
 for (let j = 0;j < 16; j++){
-    const row = document.createElement("div");
+    let row = document.createElement("div");
     row.classList.toggle("row");
     for(let i = 0; i < 16; i++){
-        const box = document.createElement("div");
+        let box = document.createElement("div");
         box.classList.toggle("box");
         draw(box);
         row.appendChild(box);
@@ -69,12 +69,12 @@ size.addEventListener("mousedown", ()=>{
     let bsize = 40 * (16/s);
     
     for (let j = 0;j < s; j++){
-        const row = document.createElement("div");
+        let row = document.createElement("div");
         row.classList.toggle("row");
         for(let i = 0; i < s; i++){
             let box = document.createElement("div");
             box.classList.toggle("box");
-            box.setAttribute("style", "width: "+  bsize +"px;" + "height: "+  bsize +"px;");
+            // box.setAttribute("style", "width: "+  bsize +"px;" + "height: "+  bsize +"px;");
             draw(box);
             row.appendChild(box);
         }
