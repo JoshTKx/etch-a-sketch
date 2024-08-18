@@ -20,6 +20,9 @@ const clear = document.createElement("button");
 clear.classList.toggle("clear");
 clear.textContent = "Clear";
 
+const footer = document.createElement("p");
+footer.classList.toggle("footer");
+footer.textContent = "Copyright © 2024 JTKX";
 
 
 
@@ -31,6 +34,7 @@ buttons.append(clear);
 body.appendChild(header);
 body.append(buttons);
 body.appendChild(container);
+body.appendChild(footer);
 
 
 let er = false;
